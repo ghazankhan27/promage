@@ -119,7 +119,7 @@ async function deleteTask(req: Request, res: Response) {
 
     await Task.findByIdAndDelete(id);
 
-    req.ws.emit("task_update", `Task ${id} deleted.`);
+    req.ws.emit("task_delete", `Task ${id} deleted.`);
 
     const response: GeneralResponse = {
       message: "Task deleted successfully.",

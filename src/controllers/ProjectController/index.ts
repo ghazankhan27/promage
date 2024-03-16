@@ -140,7 +140,7 @@ async function deleteProject(req: Request, res: Response) {
 
     await Project.findByIdAndDelete(id);
 
-    req.ws.emit("project_update", `Project ${id} deleted.`);
+    req.ws.emit("project_delete", `Project ${id} deleted.`);
 
     const response: GeneralResponse = {
       message: "Project deleted successfully.",

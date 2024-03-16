@@ -1,4 +1,4 @@
-Promage Project
+Promage Project,
 Author - Ghazan Khan
 
 1. Install dependencies using "npm install".
